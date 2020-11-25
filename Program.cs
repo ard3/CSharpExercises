@@ -1,6 +1,7 @@
 ﻿using System;
 
 namespace CSharpExercises
+namespace EComerce
 {
     class Program
     {
