@@ -1,14 +1,11 @@
 ﻿using System;
-using EComerce;
 
-namespace CSharpExercises{
-namespace EComerce
+namespace CSharpExercises
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(args[0]);
             for (int i = 0; i < args.Length; i++)
             {
                 Console.WriteLine(args[i].ToUpper());
@@ -23,22 +20,19 @@ namespace EComerce
 
             Customer.PrintSomething();
 
-            //var  article = new Article();
+
             Article article = new Article("Face mask", 12.44);
-            newArticle.Create();
-            article.Retrieve(int it);
-            article.Destroy(int id);
 
+            article.List();
+            article.Retrieve();
+            article.Destroy();
 
+            
             /* Console.WriteLine(args[0]);
             Console.WriteLine(args[1]);
-            //Console.WriteLine("Enter your name:");
-            //string tuoNome = Console.ReadLine();
-            //Console.WriteLine($"Il tuo nome è {tuoNome.ToUpper()}!");
             Console.WriteLine("Enter your name:");
             string tuoNome = Console.ReadLine();
             Console.WriteLine($"Il tuo nome è {tuoNome.ToUpper()}!"); */
         }
-    }  
-}
+    }
 }

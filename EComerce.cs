@@ -1,7 +1,10 @@
 using System;
-namespace EComerce {
-    class Costumer {
-             // Fields or Attributes
+
+namespace CSharpExercises
+{
+    class Customer
+    {
+        // Fields or Attributes
         protected int Id;
         protected string FirstName;
         protected string LastName;
@@ -14,12 +17,12 @@ namespace EComerce {
         // getter - setter
 
         // Constructor
-        public Costumer(string firstName, string lastName, string email)
+        public Customer(string firstName, string lastName, string email)
         {
             // Called on instantiation
-            this.FirstName = firstName;
-            this.LastName = lastName;
-            this.Email = email;
+            FirstName = firstName;
+            LastName = lastName;
+            Email = email;
         }
 
         // Methods
@@ -27,7 +30,7 @@ namespace EComerce {
         public void Login()
         {
             Console.WriteLine("You are logged in ...");
-            Console.WriteLine($"Hi {this.FirstName} {this.LastName}, you are logged in.");
+            Console.WriteLine($"Hi {FirstName} {LastName}, you are logged in.");
         }
         public void CheckOut()
         {
@@ -53,7 +56,7 @@ namespace EComerce {
         {
             Console.WriteLine("Something");
         }
-        // Constructor
+
         public override string ToString()
         {
             return base.ToString();
@@ -61,45 +64,38 @@ namespace EComerce {
     }
     class Article
     {
-        // Fields or Attributes
-        int Id;
-        string Description;
-        int Price;
-        int Stock;
-        int TaxRate;
+        private int Id;
+        private string Description;
+        private double Price;
+        private int Stock;
+        private int Taxes;
 
-                // Constructor
-        public Article(int id, string description, int price, int stock, int taxRate)
+        // Constructor
+        public Article(string description, double price)
         {
-            // Called on instantiation
-            this.Id = id;
-            this.Description = description;
-            this.Price = price;
-            this.Stock = stock;
-            this.TaxRate = taxRate;
+            Description = description;
+            Price = price;
         }
-             // Methods
-        // Visibility� - valore di ritorno - NomeMetodo()
+
         public void Create()
         {
-            Console.WriteLine("Your article");
-        }
-        public void Read()
-        {
-            Console.WriteLine("Read");
-        }
-        public void Update()
-        {
-            Console.WriteLine("Update");
-        }
-        public void Delete()
-        {
-            Console.WriteLine("Detele.");
+            Console.WriteLine("Create new article");
         }
         public void List()
         {
-            Console.WriteLine("This is the list of your articles.");
+            Console.WriteLine("List all articles");
+        }
+        public void Retrieve()
+        {
+            Console.WriteLine($"Id: {Id}, description: {Description}, price: {Price}");
+        }
+        public void Update()
+        {
+            Console.WriteLine("Update your article.");
+        }
+        public void Destroy()
+        {
+            Console.WriteLine("Destroy article.");
         }
     }
 }
-
