@@ -1,6 +1,7 @@
 ﻿using System;
+using EComerce;
 
-namespace CSharpExercises
+namespace CSharpExercises{
 namespace EComerce
 {
     class Program
@@ -22,6 +23,12 @@ namespace EComerce
 
             Customer.PrintSomething();
 
+            //var  article = new Article();
+            Article article = new Article("Face mask", 12.44);
+            newArticle.Create();
+            article.Retrieve(int it);
+            article.Destroy(int id);
+
 
             /* Console.WriteLine(args[0]);
             Console.WriteLine(args[1]);
@@ -32,5 +39,6 @@ namespace EComerce
             string tuoNome = Console.ReadLine();
             Console.WriteLine($"Il tuo nome è {tuoNome.ToUpper()}!"); */
         }
-    }
+    }  
+}
 }

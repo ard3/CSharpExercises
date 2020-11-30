@@ -1,6 +1,6 @@
+using System;
 namespace EComerce {
     class Costumer {
-
              // Fields or Attributes
         protected int Id;
         protected string FirstName;
@@ -14,7 +14,7 @@ namespace EComerce {
         // getter - setter
 
         // Constructor
-        public Customer(string firstName, string lastName, string email)
+        public Costumer(string firstName, string lastName, string email)
         {
             // Called on instantiation
             this.FirstName = firstName;
@@ -23,7 +23,7 @@ namespace EComerce {
         }
 
         // Methods
-        // visibilità - valore di ritorno - NomeMetodo()
+        // visibilitï¿½ - valore di ritorno - NomeMetodo()
         public void Login()
         {
             Console.WriteLine("You are logged in ...");
@@ -52,6 +52,53 @@ namespace EComerce {
         public static void PrintSomething()
         {
             Console.WriteLine("Something");
+        }
+        // Constructor
+        public override string ToString()
+        {
+            return base.ToString();
+        }
+    }
+    class Article
+    {
+        // Fields or Attributes
+        int Id;
+        string Description;
+        int Price;
+        int Stock;
+        int TaxRate;
+
+                // Constructor
+        public Article(int id, string description, int price, int stock, int taxRate)
+        {
+            // Called on instantiation
+            this.Id = id;
+            this.Description = description;
+            this.Price = price;
+            this.Stock = stock;
+            this.TaxRate = taxRate;
+        }
+             // Methods
+        // Visibilityï¿½ - valore di ritorno - NomeMetodo()
+        public void Create()
+        {
+            Console.WriteLine("Your article");
+        }
+        public void Read()
+        {
+            Console.WriteLine("Read");
+        }
+        public void Update()
+        {
+            Console.WriteLine("Update");
+        }
+        public void Delete()
+        {
+            Console.WriteLine("Detele.");
+        }
+        public void List()
+        {
+            Console.WriteLine("This is the list of your articles.");
         }
     }
 }
