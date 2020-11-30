@@ -8,25 +8,20 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\HP\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\ardit\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HP\\CSharpExercises\\CSharpExercises.csproj",
+      "projectUniqueName": "C:\\Users\\ardit\\Desktop\\backup ardi\\CSharpExercises\\CSharpExercises.csproj",
       "projectName": "CSharpExercises",
-      "projectPath": "C:\\Users\\HP\\CSharpExercises\\CSharpExercises.csproj",
-      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HP\\CSharpExercises\\obj\\",
+      "projectPath": "C:\\Users\\ardit\\Desktop\\backup ardi\\CSharpExercises\\CSharpExercises.csproj",
+      "packagesPath": "C:\\Users\\ardit\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ardit\\Desktop\\backup ardi\\CSharpExercises\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\ardit\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
