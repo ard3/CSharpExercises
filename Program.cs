@@ -41,7 +41,6 @@ namespace CSharpExercises
             
             Console.WriteLine($"Date: {orderHeader.Date}, UserID: {orderHeader.UserId}");
 
-
             firstCustomer.Age = 33;
             firstCustomer.GetAge();
             firstCustomer.AddToCart(article);

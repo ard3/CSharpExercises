@@ -49,16 +49,9 @@ namespace ECommerce
         {
             Console.WriteLine("This is your wishlist.");
         }
-        public void AddToCart(Article article)
+        public void AddToCart()
         {
-            if (article.IsCustomerOldEnough(this))
-            {
                 Console.WriteLine($"{article.Description} added to cart!");
-            }
-            else
-            {
-                Console.WriteLine("You may not be able to purchase this item");
-            }
         }
         public void Signin()
         {
@@ -86,7 +79,7 @@ namespace ECommerce
         public int Stock { get; set; }
         private int Taxes;
         
-        public Article(string description, double price,)
+        public Article(string description, double price)
         {
             this.Description = description;
             this.Price = price;
