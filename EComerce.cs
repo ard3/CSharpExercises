@@ -1,10 +1,18 @@
 using System;
 
-namespace CSharpExercises
+namespace ECommerce
 {
     class Customer
     {
         // Fields or Attributes
+        // Più privati possibili
+
+        // Properties
+        // getter - setter
+
+        // private string _X
+        // _X -> Underscore convenzione che indica attributo privato
+
         protected int Id;
         protected string FirstName;
         protected string LastName;
@@ -12,25 +20,22 @@ namespace CSharpExercises
         protected int PostalCode;
         protected string Email;
         protected string Password;
-
-        // Properties
-        // getter - setter
+        public int Age { get; set;}
 
         // Constructor
         public Customer(string firstName, string lastName, string email)
         {
             // Called on instantiation
-            FirstName = firstName;
-            LastName = lastName;
-            Email = email;
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.Email = email;
         }
 
         // Methods
-        // visibilit� - valore di ritorno - NomeMetodo()
+        // visibility - returned value - MethodName()
         public void Login()
         {
-            Console.WriteLine("You are logged in ...");
-            Console.WriteLine($"Hi {FirstName} {LastName}, you are logged in.");
+            Console.WriteLine($"Hi {this.FirstName} {this.LastName}, you are logged in.");
         }
         public void CheckOut()
         {
@@ -44,58 +49,104 @@ namespace CSharpExercises
         {
             Console.WriteLine("This is your wishlist.");
         }
-        public void AddToCart()
+        public void AddToCart(Article article)
         {
-            Console.WriteLine("Product added to cart!");
+            if (article.IsCustomerOldEnough(this))
+            {
+                Console.WriteLine($"{article.Description} added to cart!");
+            }
+            else
+            {
+                Console.WriteLine("You may not be able to purchase this item");
+            }
         }
         public void Signin()
         {
             Console.WriteLine("You are now signed in.");
         }
-        public static void PrintSomething()
+        public void GetAge()
+        {
+            Console.WriteLine($"{this.FirstName} {this.LastName} is {this.Age} years old");
+            if (this.Age < 18) Console.WriteLine("This customer might not be able to buy certain articles");
+        }
+
+        public static void SaySomething()
         {
             Console.WriteLine("Something");
         }
-
-        public override string ToString()
-        {
-            return base.ToString();
-        }
     }
+
     class Article
     {
-        private int Id;
-        private string Description;
-        private double Price;
-        private int Stock;
+        // private int Id; // Field
+        // private int Id { get; set; }; // Property
+        public int Id { get; }
+        public string Description { get; set; }
+        public double Price { get; set; }
+        public int Stock { get; set; }
         private int Taxes;
-
-        // Constructor
-        public Article(string description, double price)
+        
+        public Article(string description, double price,)
         {
-            Description = description;
-            Price = price;
+            this.Description = description;
+            this.Price = price;
         }
 
         public void Create()
         {
             Console.WriteLine("Create new article");
         }
-        public void List()
+        public void List() 
         {
             Console.WriteLine("List all articles");
         }
-        public void Retrieve()
+        public void Retrieve(int id)
         {
-            Console.WriteLine($"Id: {Id}, description: {Description}, price: {Price}");
+            Console.WriteLine($"Id: {this.Id}, description: {this.Description}, price: {this.Price}");
         }
         public void Update()
         {
             Console.WriteLine("Update your article.");
         }
-        public void Destroy()
+        public void Destroy(int id)
         {
-            Console.WriteLine("Destroy article.");
+            Console.WriteLine($"You just destroyed item #{id}");
+        }
+    }
+
+    class OrderHeader 
+    {
+        public int Id { get; }
+        public string OrderNumber { get; }
+        public DateTime Date { get; }
+        public int UserId { get; }
+
+        public OrderHeader(int userId, DateTime date)
+        {
+            //this.UserId or UserId 
+            this.UserId = userId;
+            this.Date = date;
+        }
+
+        public void Create()
+        {
+            Console.WriteLine("Create new order");
+        }
+        public void List() 
+        {
+            Console.WriteLine("List all orders");
+        }
+        public void Retrieve(int id)
+        {
+            Console.WriteLine($"Id: {this.Id}, OrderNumber: {this.OrderNumber}, UserId: {this.UserId}, Date: {this.Date}");
+        }
+        public void Update()
+        {
+            Console.WriteLine("Update your order");
+        }
+        public void Destroy(int id)
+        {
+            Console.WriteLine("You have canlled this order ");
         }
     }
 }
