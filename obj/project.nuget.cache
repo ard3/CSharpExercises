@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "SqjaxDDFR8fwTjhlhpbH5YBFGW3crkD/nTZil1Csb79cciADR5U8SL0hU7rZtB3EHWDQ3LT09F80x6CQsRLTcw==",
   "success": true,
   "projectFilePath": "C:\\Users\\ardit\\Documents\\CSharpExercises\\CSharpExercises.csproj",
+=======
+  "dgSpecHash": "xHyAOOKQKZwBlMQcleTq1BzELYky+5F9m15Eh5AFHzHSfMHVT20GWLIxCJnS812RBus4YpffesFHszugP43RQQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ardit\\Desktop\\backup ardi\\CSharpExercises\\CSharpExercises.csproj",
+>>>>>>> bdbb4aab8eb40043a7803758da9d9a22225e8bfa
   "expectedPackageFiles": [],
   "logs": []
 }

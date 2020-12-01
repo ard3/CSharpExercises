@@ -13,11 +13,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\ardit\\Documents\\CSharpExercises\\CSharpExercises.csproj",
       "projectName": "CSharpExercises",
       "projectPath": "C:\\Users\\ardit\\Documents\\CSharpExercises\\CSharpExercises.csproj",
       "packagesPath": "C:\\Users\\ardit\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\ardit\\Documents\\CSharpExercises\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\ardit\\Desktop\\backup ardi\\CSharpExercises\\CSharpExercises.csproj",
+      "projectName": "CSharpExercises",
+      "projectPath": "C:\\Users\\ardit\\Desktop\\backup ardi\\CSharpExercises\\CSharpExercises.csproj",
+      "packagesPath": "C:\\Users\\ardit\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ardit\\Desktop\\backup ardi\\CSharpExercises\\obj\\",
+>>>>>>> bdbb4aab8eb40043a7803758da9d9a22225e8bfa
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ardit\\AppData\\Roaming\\NuGet\\NuGet.Config",
