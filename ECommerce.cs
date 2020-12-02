@@ -51,16 +51,11 @@ namespace ECommerce
         }
         public void AddToCart()
         {
-                Console.WriteLine($"{article.Description} added to cart!");
+                Console.WriteLine("article added to cart!");
         }
         public void Signin()
         {
             Console.WriteLine("You are now signed in.");
-        }
-        public void GetAge()
-        {
-            Console.WriteLine($"{this.FirstName} {this.LastName} is {this.Age} years old");
-            if (this.Age < 18) Console.WriteLine("This customer might not be able to buy certain articles");
         }
 
         public static void SaySomething()
@@ -107,6 +102,7 @@ namespace ECommerce
         }
     }
 
+    //OrderHeader
     class OrderHeader 
     {
         public int Id { get; }
@@ -139,7 +135,7 @@ namespace ECommerce
         }
         public void Destroy(int id)
         {
-            Console.WriteLine("You have canlled this order ");
+            Console.WriteLine("You have cancelled this order ");
         }
     }
 }

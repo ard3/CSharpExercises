@@ -21,8 +21,9 @@ namespace CSharpExercises
 
             Customer.SaySomething();
 
+            //class Article
 
-            Article article = new Article("Face mask", 12.44,);
+            Article article = new Article("Face mask", 12.44);
 
             article.List();
             article.Retrieve(0);
@@ -33,6 +34,8 @@ namespace CSharpExercises
 
             Console.WriteLine($"{article.Description} price is : {article.Price}");
 
+            // class OrderHeader
+
             OrderHeader orderHeader = new OrderHeader(20, DateTime.Now);
 
             orderHeader.List();
@@ -40,10 +43,6 @@ namespace CSharpExercises
             orderHeader.Destroy(0);
             
             Console.WriteLine($"Date: {orderHeader.Date}, UserID: {orderHeader.UserId}");
-
-            firstCustomer.Age = 33;
-            firstCustomer.GetAge();
-            firstCustomer.AddToCart(article);
 
             /* Console.WriteLine(args[0]);
             Console.WriteLine(args[1]);
