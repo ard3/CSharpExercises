@@ -1,5 +1,6 @@
 ﻿using System;
 using ECommerce;
+using ExLinq;
 
 namespace CSharpExercises
 {

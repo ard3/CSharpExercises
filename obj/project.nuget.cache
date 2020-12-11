@@ -1,15 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SqjaxDDFR8fwTjhlhpbH5YBFGW3crkD/nTZil1Csb79cciADR5U8SL0hU7rZtB3EHWDQ3LT09F80x6CQsRLTcw==",
+  "dgSpecHash": "NPfdtboh9AjSUH+r59MnSnNipKnB7TTZB82rLBXeME3VA05MHB+xBGQrhn6XwA8dMlWAAimDdZbAQ2VMU1FmeQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\ardit\\Documents\\CSharpExercises\\CSharpExercises.csproj",
   "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\ardit\\Documents\\CSharpExercises\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }
