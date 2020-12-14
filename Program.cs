@@ -16,6 +16,7 @@ namespace CSharpExercises
             }
 
             // var firstCustomer = new Customer();
+            
             Customer firstCustomer = new Customer("Francesco", "Bacci", "madcatxxx@gmail.com");
             firstCustomer.Login();
 
@@ -56,6 +57,10 @@ namespace CSharpExercises
             Console.WriteLine("Enter your name:");
             string tuoNome = Console.ReadLine();
             Console.WriteLine($"Il tuo nome è {tuoNome.ToUpper()}!"); */
+
+            /*
+            
+            */
         }
     }
 }

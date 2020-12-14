@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace ECommerce
 {
+    //class customer
     class Customer
     {
         // Fields or Attributes
@@ -63,8 +64,30 @@ namespace ECommerce
         {
             Console.WriteLine("Something");
         }
+    }  //end class customer
+
+        //class customers
+class Customers {
+
+    private List<Customer> _Customerlist;
+
+    public Customers(){
+        this._Customerlist = new List<Customer>();
     }
 
+    public void AddCustomer(Customer customer){
+
+        this._Customerlist.Add(customer);
+    }
+
+    public void RemoveCustomer(Customer customer){
+        this._Customerlist.Remove(customer);
+    }
+   
+}
+        //end class customers
+
+    //class article
     class Article
     {
         // private int Id; // Field
@@ -101,7 +124,7 @@ namespace ECommerce
         {
             Console.WriteLine($"You just destroyed item #{id}");
         }
-    }
+    } //end class article
 
     //OrderHeader
     class OrderHeader 
@@ -138,5 +161,5 @@ namespace ECommerce
         {
             Console.WriteLine("You have cancelled this order ");
         }
-    }
+    }  //end class orderHeader
 }
