@@ -2,7 +2,9 @@
 using ECommerce;
 using ExLinq;
 using Mountain;
-
+using System.Collections.Generic;
+using System.Linq;
+using System.IO;
 
 namespace CSharpExercises
 {
@@ -10,6 +12,19 @@ namespace CSharpExercises
     {
         static void Main(string[] args)
         {
+           /*IEnumerable<string> lines = File.ReadAllLines("order-details.csv");
+           var query = 
+           from line in lines 
+            let row = line.Split(",")
+            let fourthColumn = row[3]
+            select int.Parse(fourthColumn);
+            Console.WriteLine(query.Sum());
+            var max = query.Max();
+            Console.WriteLine(max);
+
+            //scriviamo in un file
+            File.WriteAllText("max.text", max.ToString());*/
+
             for (int i = 0; i < args.Length; i++)
             {
                 Console.WriteLine(args[i].ToUpper());
@@ -58,9 +73,35 @@ namespace CSharpExercises
             string tuoNome = Console.ReadLine();
             Console.WriteLine($"Il tuo nome è {tuoNome.ToUpper()}!"); */
 
-            /*
             
-            */
-        }
+           /* public static void Main(string[] args){
+
+            var prices = new List<Article>{};
+
+            Article article1 = new Article(45.56, "felpa");
+            Article article2 = new Article(52.55, "jeans");
+
+            prices.Add(article1);
+            prices.Add(article2);
+
+            Console.WriteLine(prices[1].Description);
+
+            var total = prices.Aggregate(0.00, (acc , val) => acc + val.Price);
+            Console.WriteLine(total);
+            }
+
+            class Article 
+            {
+                public double Price {get;} = 52.12;
+                public string Description = "Description example";
+
+                public Article(double price, string description)
+                {
+                    this.Price = price;
+                    this.Description = description;
+                }*/
+        }  
+            
+        
     }
 }

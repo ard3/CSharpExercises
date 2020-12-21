@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ECommerce
 {
@@ -65,6 +66,83 @@ namespace ECommerce
             Console.WriteLine("Something");
         }
     }  //end class customer
+
+          //class admin
+        class Admin {
+
+            //field or atributes
+            protected int Id;
+        protected string FirstName;
+        protected string LastName;
+        protected string Adress;
+        protected int PostalCode;
+        protected string Email;
+        protected string Password;
+        private int age;
+
+        public int GetAge()
+        {
+            return age;
+        }
+
+        public void SetAge(int value)
+        {
+            age = value;
+        }
+
+        // Constructor
+        public Admin(string firstName, string lastName, string email)
+        {
+            // Called on instantiation
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.Email = email;    
+        }
+
+         public void Login()
+        {
+            Console.WriteLine($"Hi {this.FirstName} {this.LastName}, you are logged in.");
+        }
+        public void CheckOut()
+        {
+            Console.WriteLine("Product(s) purchased.");
+        }
+        public void MyOrders()
+        {
+            Console.WriteLine("These are your orders.");
+        }
+        public void WishList()
+        {
+            Console.WriteLine("This is your wishlist.");
+        }
+        public void AddToCart()
+        {
+                Console.WriteLine("article added to cart!");
+        }
+        public void Signin()
+        {
+            Console.WriteLine("You are now signed in.");
+        }
+
+        public static void SaySomething()
+        {
+            Console.WriteLine("Something");
+        }
+
+        public void ManageOrders()
+        {
+            Console.WriteLine("Manage orders");
+        }
+        public void ManageArticles()
+        {
+            Console.WriteLine("Manage articles");
+        }
+        public void ManageCustomers()
+        {
+            Console.WriteLine("Manage customers");
+        }
+        }
+
 
         //class customers
 class Customers {
@@ -162,4 +240,30 @@ class Customers {
             Console.WriteLine("You have cancelled this order ");
         }
     }  //end class orderHeader
+
+    //class cart
+     class Cart
+    {
+        // Fields
+        private int Id;
+        private int Id_article;
+        private int UserId;
+        private int Qta;
+
+        //Methods
+        public void Buy()
+        {
+            Console.WriteLine("You will soon redirected to the payment page");
+        }
+
+        public void Empty()
+        {
+            Console.WriteLine("You removed all articles from cart");
+        }
+
+        public void ListCart()
+        {
+            Console.WriteLine("This is the list of your carts");
+        } 
+    } //end class cart
 }
