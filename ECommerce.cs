@@ -249,6 +249,19 @@ class Customers {
         private int Id_article;
         private int UserId;
         private int Qta;
+        public static List<Cart> ListCart = new List<Cart>();
+        public List<Article> AllItems = new List<Article>();
+
+        //constructor
+
+
+        public Cart(Article article, Customer users, int qta)
+        {
+
+            this.Id_article = Id_article;
+            this.UserId = UserId;
+            this.Qta = Qta;
+        }
 
         //Methods
         public void Buy()
@@ -261,9 +274,101 @@ class Customers {
             Console.WriteLine("You removed all articles from cart");
         }
 
-        public void ListCart()
+        public void ListOfCart()
         {
             Console.WriteLine("This is the list of your carts");
-        } 
+        }
+
+        public void addMultiplyArticle(Article article)
+        {
+
+            AllItems.Add(article);
+
+        }
+
+        public void Total()
+        {
+
+            var total = AllItems.Aggregate(0.00, (acc, val) => acc + val.Price);
+
+            Console.WriteLine("Prices {0}", total);
+
+        }
+
     } //end class cart
+
+    // class Articles
+
+    class Articles
+    {
+        private int _Id;
+        public string _Description;
+        public double Price;
+        public int _Stock;
+        private List<Article> ListOfItems;
+        public int Vat;
+
+
+
+        public Articles()
+        {
+
+            ListOfItems = new List<Article>();
+        }
+        public void addToListOfArticles(Article article)
+        {
+
+            ListOfItems.Add(article);
+
+        }
+
+        public Article search(string description)
+        {
+
+            foreach (Article items in ListOfItems)
+            {
+                if (items.Description == description)
+                {
+                    return items;
+                }
+
+            }
+            return null;
+        }
+
+
+        /*
+            public List<Article> Search(string description){
+
+
+            }
+        */
+        public void CreateArticles()
+        {
+
+
+        }
+        public void ReadArticles()
+        {
+
+        }
+        public void UpdateArticle()
+        {
+
+        }
+
+        public void Delete()
+        {
+
+        }
+        public void List()
+        {
+
+            foreach (var items in this.ListOfItems)
+            {
+                Console.WriteLine("{0}", items.Description);
+            }
+
+        }
+    }
 }

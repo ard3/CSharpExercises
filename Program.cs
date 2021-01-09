@@ -73,35 +73,89 @@ namespace CSharpExercises
             string tuoNome = Console.ReadLine();
             Console.WriteLine($"Il tuo nome è {tuoNome.ToUpper()}!"); */
 
-            
-           /* public static void Main(string[] args){
 
-            var prices = new List<Article>{};
+            /* public static void Main(string[] args){
 
-            Article article1 = new Article(45.56, "felpa");
-            Article article2 = new Article(52.55, "jeans");
+             var prices = new List<Article>{};
 
-            prices.Add(article1);
-            prices.Add(article2);
+             Article article1 = new Article(45.56, "felpa");
+             Article article2 = new Article(52.55, "jeans");
 
-            Console.WriteLine(prices[1].Description);
+             prices.Add(article1);
+             prices.Add(article2);
 
-            var total = prices.Aggregate(0.00, (acc , val) => acc + val.Price);
-            Console.WriteLine(total);
-            }
+             Console.WriteLine(prices[1].Description);
 
-            class Article 
-            {
-                public double Price {get;} = 52.12;
-                public string Description = "Description example";
+             var total = prices.Aggregate(0.00, (acc , val) => acc + val.Price);
+             Console.WriteLine(total);
+             }
 
-                public Article(double price, string description)
-                {
-                    this.Price = price;
-                    this.Description = description;
-                }*/
-        }  
-            
-        
+             class Article 
+             {
+                 public double Price {get;} = 52.12;
+                 public string Description = "Description example";
+
+                 public Article(double price, string description)
+                 {
+                     this.Price = price;
+                     this.Description = description;
+                 }*/
+
+            // issue 8 millestone 1------------------------------------------------------------------------
+            // we can create new customers
+            // Create a new users or a list of users.....
+
+            // Create a new users or a list of users.....
+
+            Customer User1 = new Customer("user1", "surname1", "user1surname1@gmail.com"); // Create a new customers;
+            Customer User2 = new Customer("user2", "surname2", "user2surname2@yahoo.com");
+
+            Customers insert = new Customers(); // Create a new List of customers
+
+            insert.AddCustomer(User1);
+            insert.AddCustomer(User2); //With this method we can add users in a list of users
+
+
+            //Now we can create a new Article and add to a list of articles
+
+            Article scarpe = new Article("scarpe blu", 55.2); // Article take description, stock and price as arguments
+            Article felpa = new Article("felpa bianca", 88.1);
+            Article maglia = new Article("maglia nera", 24.9);
+
+            Articles CreateList = new Articles(); //Set an istance to create a list of article
+
+            CreateList.addToListOfArticles(scarpe);
+            CreateList.addToListOfArticles(felpa);   //Add article to articles
+            CreateList.addToListOfArticles(maglia);
+
+            CreateList.List();  //Add a method to diplay all articles add
+
+            //millestone 2------------------------------
+
+            //we can search for an article by its description, and we can print its price
+
+            //we can add the searched article to the Cart
+
+            Console.WriteLine(CreateList.search("felpa binca").Price);  //search an article and print his price 
+
+            //Add article
+
+            var myarticle = CreateList.search("felpa bianca");
+            Cart Cart = new Cart(myarticle, User1, 20);
+
+            // Milestone 3 -----------------------------
+
+            //We can add multiple article to the cart
+
+            Cart newCart1 = new Cart(scarpe, User1, 10);
+            Cart newCart2 = new Cart(maglia, User2, 20); //Create a new istance of a cart
+
+            newCart1.addMultiplyArticle(scarpe);  //Add multiply article to cart
+            newCart1.addMultiplyArticle(maglia);
+
+            newCart1.Total();  //Calculate the total from the cart1
+        }
+
+
     }
 }
